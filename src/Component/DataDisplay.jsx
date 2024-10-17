@@ -6,7 +6,7 @@ const DataDisplay = () => {
 
   const getCovidData = async () => {
     try {
-      const res = await fetch("https://data.covid19india.org/data.json");
+      const res = await fetch("https://api.covid19india.org/state_district_wise.json");
       const { statewise } = await res.json();
       setStateData(statewise);
     } catch (err) {
